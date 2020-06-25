@@ -576,7 +576,7 @@ void RageSound::ApplyParams()
 	if( m_pSource == nullptr )
 		return;
 
-	m_pSource->SetProperty( "Pitch", m_Param.m_fPitch );
+	m_pSource->SetProperty( "Pitch", m_Param.m_fSpeed );
 	m_pSource->SetProperty( "Speed", m_Param.m_fSpeed );
 	m_pSource->SetProperty( "StartSecond", m_Param.m_StartSecond );
 	m_pSource->SetProperty( "LengthSeconds", m_Param.m_LengthSeconds );

@@ -322,7 +322,7 @@ void ScreenDebugOverlay::Update( float fDeltaTime )
 			if( INPUTFILTER->IsBeingPressed(g_Mappings.holdForSlow) )
 				fRate = 0; // both; stop time
 			else
-				fRate *= 4;
+				fRate *= 8;
 		}
 		else if( INPUTFILTER->IsBeingPressed(g_Mappings.holdForSlow) )
 		{
