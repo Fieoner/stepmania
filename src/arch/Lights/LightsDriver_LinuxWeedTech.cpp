@@ -41,6 +41,7 @@ static inline void SerialOut( const char *str, size_t len )
 			SerialClose();
 			return;
 		}
+		LOG->Trace( "Written: %s", str );
 		len -= result;
 		str += result;
 	}
@@ -53,7 +54,7 @@ static inline void SerialOpen()
 	SerialClose();
 
 	// Open a fresh instance..
-	fd = open( "/dev/ttyS0", O_WRONLY | O_NOCTTY | O_NDELAY );
+	fd = open( "/dev/ttyWEED0", O_WRONLY | O_NOCTTY | O_NDELAY );
 	if( fd < 0 )
 	{
 		LOG->Warn( "Error opening serial port for lights. Error:: %d %s", errno, strerror(errno) );
